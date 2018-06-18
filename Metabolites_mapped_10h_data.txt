@@ -1,0 +1,182 @@
+glycine	0.78
+serine	0.75
+aspartate	0.77
+asparagine	0.76
+glutamate	0.74
+1-pyrroline-5-carboxylate	0.64
+methylimidazoleacetic acid	0.49
+4-hydroxyphenyllactate	0.75
+L-cystathionine	0.63
+cysteine	0.68
+arginine	0.83
+ornithine	0.64
+proline	0.79
+argininosuccinate	0.78
+GSSG	0.45
+glycerate	0.82
+cis-aconitate	0.87
+L-carnitine	0.77
+sn-glycerol-3-phosphate	0.66
+chenodeoxycholic acid	0.32
+glycoursodeoxycholate	0.65
+inosine	0.23
+AMP	0.53
+deoxyuridine	0.75
+deoxycytidine	0.7
+dihydrobiopterin	0.57
+guanidinoacetate	0.58
+sulfate	0.1
+N-acetylmethionine	0.83
+O-butanoylcarnitine	0.66
+O-propanoylcarnitine	0.62
+allantoate	0.58
+trans-4-hydroxy-L-proline	0.61
+alanine	0.91
+serotonin	0.54
+citrulline	0.87
+nicotinamide	0.66
+dimethylglycine	1.28
+xanthurenate	3.06
+creatine	1.35
+spermine	2.18
+spermidine	2.15
+ophthalmate	7.98
+glucose	1.14
+pyruvate	1.36
+fructose	1.44
+mannose	1.16
+arachidonate	1.42
+2-hydroxyglutarate	2.13
+L-palmitoylcarnitine	1.43
+stearoylcarnitine	1.38
+choline	1.22
+sphingosine-1-phosphate	1.29
+uracil	1.42
+3-ureidopropionate	2.14
+beta-alanine	1.5
+cytidine	1.98
+4-pyridoxate	1.31
+cholesterol	1.21
+sphingosine	1.54
+2-arachidonoylglycerol	2.43
+ethanolamine-phosphate	1.32
+SM pool	1.78
+glutamine	0.92
+tyrosine	0.92
+2-hydroxybutyrate	1.44
+creatinine	0.98
+L-lactate	1.1
+myristic acid	1.22
+palmitate	1.19
+sphinganine-1-phosphate	1.23
+cholate	0.47
+glycochenodeoxycholate	0.14
+alpha-muricholic acid	0.28
+taurodeoxycholate	1.21
+ursodeoxycholate	0.85
+urate	0.85
+cAMP	1.08
+adenine	1.1
+orotate	1.07
+thymine	1.23
+oxalate	1.05
+heme	0.96
+16-hydroxyhexadecanoic acid	1.35
+tauro-hyodeoxycholic acid	1.34
+4-aminobutyrate	1.03
+decanoic acid	0.96
+hexanoic acid	1.27
+nonanoic acid	1.28
+octanoic acid	0.85
+phenylacetylglycine	1.06
+urea	0.97
+ribose	0.84
+ribitol	1.12
+xylitol	0.96
+stearate	1.04
+oleate	1.17
+EPA	1.42
+DPA	1.08
+DHA	1.09
+dihomo-gamma-linolenate	1.2
+L-oleoylcarnitine	1.39
+acetoacetate	1.69
+(R)-3-hydroxybutanoate	1.02
+corticosterone	1.74
+glycocholate	0.3
+taurocholate	1.22
+taurochenodeoxycholate	1.23
+beta-muricholic acid	0.65
+tauro-alpha-muricholic acid	1.28
+tauro-beta-muricholic acid	1.26
+deoxycholic acid	0.61
+glycodeoxycholate	0.1
+hyocholic acid	0.34
+hyodeoxycholate	0.56
+glycohyodeoxycholic acid	0.24
+adenosine	1.73
+uridine	1.16
+thymidine	1.25
+1-methylnicotinamide	0.66
+glycerol	1.22
+sarcosine	0.82
+palmitolate	1.65
+N-acetyl-L-aspartate	1.13
+N-acetyl-L-glutamate	1.08
+4-hydroxyphenylpyruvate	0.94
+kynurenine	1.12
+4-hydroxy-2-quinolinecarboxylic acid	1.1
+anthranilate	1.21
+picolinic acid	1.18
+3-hydroxyisobutyrate	1.19
+fumarate	1.05
+malate	0.96
+margaric acid	1.19
+(10Z)-heptadecenoic acid	1.23
+"13,16,19-docosatrienoic acid"	0.93
+gamma-linolenate	1.23
+adrenic acid	1.55
+"(4Z,7Z,10Z,13Z,16Z)-DPA"	1.08
+mead acid	1.33
+methylmalonate	0.84
+quinolinate	1.3
+threonate	1.23
+L-xylonate	1.21
+4-methyl-2-oxopentanoate	1.12
+"N6,N6,N6-trimethyl-L-lysine"	1.05
+"(11Z,14Z)-eicosadienoic acid"	1.06
+pentadecylic acid	1.1
+imidazole-4-acetate	0.73
+phenylpyruvate	1.42
+2-oxo-3-methylvalerate	0.74
+3-methyl-2-oxobutyrate	1.08
+alpha-hydroxyisocaproic acid	1.02
+hypotaurine	0.68
+5-oxoproline	0.91
+carnosine	0.49
+3-phospho-D-glycerate	0.78
+glucuronate	1.05
+O-acetylcarnitine	0.76
+L-octanoylcarnitine	0.95
+phosphocholine	0.91
+sphinganine	1.9
+xanthosine	1
+allantoin	1.08
+(S)-dihydroorotate	0.93
+biliverdin	0.97
+5-methylthioadenosine	0.82
+D-gluconic acid	1.15
+Neu5Ac	1.03
+"2,5-dihydroxybenzoate"	0.63
+gamma-butyrobetaine	0.81
+N-acetylputrescine	0.99
+eicosanoate	0.73
+cis-erucic acid	1.08
+"9,10-hydroxyoctadec-12(Z)-enoate"	1.16
+stearidonic acid	1.08
+"(13Z,16Z)-docosadienoic acid"	0.83
+isocitrate	3.04
+L-2-aminoadipate	1.45
+2-oxoadipate	2.16
+lauric acid	1.32
+inositol	0.43

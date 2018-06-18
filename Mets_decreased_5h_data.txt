@@ -1,0 +1,43 @@
+alanine exchange (fwd)	0.91
+L-carnitine exchange (fwd)	0.9
+proline exchange (fwd)	0.87
+serine exchange (fwd)	0.86
+glycerate exchange (fwd)	0.86
+"N6,N6,N6-trimethyl-L-lysine exchange (fwd)"	0.86
+glycine exchange (fwd)	0.84
+cis-aconitate exchange (fwd)	0.83
+argininosuccinate exchange (fwd)	0.82
+sarcosine exchange (fwd)	0.82
+arginine exchange (fwd)	0.81
+ribitol exchange (fwd)	0.79
+asparagine exchange (fwd)	0.78
+deoxyuridine exchange (fwd)	0.78
+trans-4-hydroxy-L-proline exchange (fwd)	0.78
+L-arabitol exchange (fwd)	0.74
+N-acetyl-L-aspartate exchange (fwd)	0.74
+malate exchange (fwd)	0.73
+sn-glycerol-3-phosphate exchange (fwd)	0.72
+fumarate exchange (fwd)	0.7
+L-xylonate exchange (fwd)	0.7
+azelaic acid exchange (fwd)	0.68
+4-hydroxyphenylpyruvate exchange (fwd)	0.66
+1-pyrroline-5-carboxylate exchange (fwd)	0.63
+O-butanoylcarnitine exchange (fwd)	0.62
+O-propanoylcarnitine exchange (fwd)	0.62
+spermidine exchange (fwd)	0.57
+ribose exchange (fwd)	0.57
+4-hydroxyphenyllactate exchange (fwd)	0.55
+phenylacetylglycine exchange (fwd)	0.53
+methylmalonate exchange (fwd)	0.48
+methylimidazoleacetic acid exchange (fwd)	0.47
+AMP exchange (fwd)	0.32
+chenodeoxycholic acid exchange (fwd)	0.28
+beta-muricholic acid exchange (fwd)	0.28
+glycocholate exchange (fwd)	0.21
+deoxycholic acid exchange (fwd)	0.19
+glycohyodeoxycholic acid exchange (fwd)	0.15
+inosine exchange (fwd)	0.15
+hyodeoxycholate exchange (fwd)	0.13
+sulfate exchange (fwd)	0.1
+glycodeoxycholate exchange (fwd)	0.09
+hyocholic acid exchange (fwd)	0.08

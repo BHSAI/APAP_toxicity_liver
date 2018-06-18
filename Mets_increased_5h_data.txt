@@ -1,0 +1,52 @@
+xanthurenate exchange (fwd)	9.57
+DPA exchange (fwd)	4.84
+"(4Z,7Z,10Z,13Z,16Z)-DPA exchange (fwd)"	4.84
+adenosine exchange (fwd)	4.64
+EPA exchange (fwd)	4.5
+isocitrate exchange (fwd)	4.49
+taurocholate exchange (fwd)	3.92
+tauro-beta-muricholic acid exchange (fwd)	3.87
+taurochenodeoxycholate exchange (fwd)	3.41
+adrenic acid exchange (fwd)	3.4
+"13,16,19-docosatrienoic acid exchange (fwd)"	3.22
+"(11Z,14Z)-eicosadienoic acid exchange (fwd)"	3.18
+cytidine exchange (fwd)	2.94
+DHA exchange (fwd)	2.9
+dihomo-gamma-linolenate exchange (fwd)	2.82
+margaric acid exchange (fwd)	2.78
+corticosterone exchange (fwd)	2.61
+4-hydroxy-2-quinolinecarboxylic acid exchange (fwd)	2.47
+mead acid exchange (fwd)	2.29
+tauro-alpha-muricholic acid exchange (fwd)	2.24
+anthranilate exchange (fwd)	2.22
+nicotinamide exchange (fwd)	2.01
+gamma-linolenate exchange (fwd)	1.99
+quinolinate exchange (fwd)	1.9
+1-methylnicotinamide exchange (fwd)	1.87
+thymidine exchange (fwd)	1.86
+oleate exchange (fwd)	1.81
+kynurenine exchange (fwd)	1.79
+(10Z)-heptadecenoic acid exchange (fwd)	1.78
+picolinic acid exchange (fwd)	1.76
+uracil exchange (fwd)	1.65
+stearate exchange (fwd)	1.64
+glycerol exchange (fwd)	1.62
+3-ureidopropionate exchange (fwd)	1.61
+uridine exchange (fwd)	1.58
+arachidonate exchange (fwd)	1.56
+3-hydroxyisobutyrate exchange (fwd)	1.56
+acetoacetate exchange (fwd)	1.53
+ethanolamine-phosphate exchange (fwd)	1.48
+pentadecylic acid exchange (fwd)	1.46
+L-palmitoylcarnitine exchange (fwd)	1.41
+threonate exchange (fwd)	1.35
+N-acetyl-L-glutamate exchange (fwd)	1.3
+mannose exchange (fwd)	1.29
+(R)-3-hydroxybutanoate exchange (fwd)	1.29
+N-acetylmethionine exchange (fwd)	1.29
+SM pool exchange (fwd)	1.25
+L-oleoylcarnitine exchange (fwd)	1.23
+choline exchange (fwd)	1.23
+4-methyl-2-oxopentanoate exchange (fwd)	1.23
+4-pyridoxate exchange (fwd)	1.21
+glucose exchange (fwd)	1.17
