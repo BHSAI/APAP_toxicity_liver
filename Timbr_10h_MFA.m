@@ -2,17 +2,22 @@
 % Script to run timbr predictions for acetaminophen induced liver injury
 % Under metabolic flux analysis constraints.
 % Load the path to reactions weights generated using the R scripts
-path_rcode_directory = '(location of the reaction weights)\Weights_apap/';
-path_model_directory = '(current model directory)/';
+Spath = mfilename('fullpath');
+Loc = regexp(Spath,filesep);
+Fpath = Spath(1:Loc(end));
+FilePath10 = [Fpath,'Weights_apap',filesep];
+path_rcode_directory = FilePath10;
+path_model_directory = Fpath;
 % Specify output directory for TIMBR predictions
-path_timbr_directory = [path_model_directory 'MFA_10h/'];
-
-changeCobraSolver('glpk'); % or glpk
-% % Load COBRA models
+path_timbr_directory = [path_model_directory 'MFA_10h',filesep];
+pause
+addpath (Fpath)
+% Change the solver
+changeCobraSolver('glpk'); 
+% Load COBRA models
 load iRno_v2.mat;
-% obj_value_required 
+% no specific objective functions (biomass or ATP)
 obj_value_required = 0;
-% atp_value_required = 5000;
 atp_value_required = 0;
 % Set unconstrained reaction bounds to +/- 10^5 because the largest
 % consumption rate is fairly close to the default 10^3 reaction bound.
@@ -44,8 +49,8 @@ for i =1:length(ex_u)
 end
 % % Bounds for metaboolites with no data (fixed based on invitro)
 ex_u1 = {'linolenate exchange (rev)','cholesterol exchange (rev)', ...
-        'linoleate exchange (rev)','palmitate exchange (rev)', 'oleate exchange (rev)', ...
-        'stearate exchange (rev)','palmitolate exchange (rev)','myristic acid exchange (rev)'};
+         'linoleate exchange (rev)','palmitate exchange (rev)', 'oleate exchange (rev)', ...
+         'stearate exchange (rev)','palmitolate exchange (rev)','myristic acid exchange (rev)'};
 ex_uv1 = [6.2,47.84,11.64,11.64,15.13,6.2,7.8,4.66];
 for i =1:length(ex_u1)
     ex_ub1(i) = find(strcmp(ex_u1(i),rno_irrev1.rxnNames));
@@ -63,9 +68,9 @@ rno_irrev = changeRxnBounds(rno_irrev,rno_irrev.rxns(ex_ub1),ex_uv1,'b');
 rno_irrev = changeRxnBounds(rno_irrev,rno_irrev.rxns(ex_ub2),ex_sv,'l');
 %%      G6Pase    ,  GPI ,      , ALDO        F1,6Bpase  ,  GADPH     , G3P        , PGK      ,     ENO       
 gnf = {'RCR11028_f','RCR14185_f','RCR14183_f','RCR14184_f' 'RCR11027_f','RCR11051_f','RCR10230_r','RCR10443_r'...
-    'RCR10289_f','RCR11087_r','RCR11072_f','RCR10283_f','RCR11661_r','RCR10349_f','RCR11671_f','RCR11373_f','RCR11674_r'};
-% %  PK        ,    LDH         , PC       , PEPCK  ,        CS       , IDH         , OGDH       , PCC        ,  SDH
-for k=1:length(gnf)
+       'RCR10289_f','RCR11087_r','RCR11072_f','RCR10283_f','RCR11661_r','RCR10349_f','RCR11671_f','RCR11373_f','RCR11674_r'};
+%    %  PK        ,  LDH         , PC       ,  PEPCK  ,      CS       , IDH         , OGDH       , PCC        ,  SDH
+for k=1:length(gnf) 
     gr(k)=find(strcmp(gnf(k),rno_irrev.rxns));
 end
 % Flux data for control conditions obtained from metabolic flux analysis
@@ -120,7 +125,6 @@ for exchange_index = 1:length(rno_production)
             disp('solution not feasible')
            %pause
        end
-    
     disp(rno_production_fba)
 end
 
@@ -149,7 +153,7 @@ else
     warning('reaction weights not specified for all reactions in rno')
 end
 
-% % Run TIMBR algorithm and save results as .txt files
+% Run TIMBR algorithm and save results as .txt files
 % Estimate the global network demand of producing each exchange metabolite
 % under treatment and control conditions for various compounds. 
 % Saved outputs will be analyzed in the R/Bioconductor script:
@@ -166,7 +170,7 @@ rno_irrev.ub(gr) = v_ub;
     else    %         % Flux data for treatment with acetaminophen
 disp('treatment') 
 t_lb =1*[544.5,544.5,544.5,544.5,2*413,2*100,2*413,2*413,(0.8/0.8)*650,620/2,(0.8/0.8)*1270,(0.8/0.8)*1478,579,579,579,208,786.6]; % 20% reduced
-t_ub =1.5*[544.5,544.5,544.5,544.5,2*413,2*131,2*413,2*413,(1.2/1.2)*650,620/2,(1.2/1.2)*1270,(1.2/1.2)*1478,579,579,579,208,786.6]; % 20% increased
+t_ub =1.3*[544.5,544.5,544.5,544.5,2*413,2*131,2*413,2*413,(1.2/1.2)*650,620/2,(1.2/1.2)*1270,(1.2/1.2)*1478,579,579,579,208,786.6]; % 20% increased
 rno_irrev.lb(gr)=v_lb;
 rno_irrev.ub(gr) = t_ub;
     end
@@ -190,11 +194,12 @@ rno_irrev.ub(gr) = t_ub;
     writetable(rno_timbr_table,rno_timbr_file_name,...
         'Delimiter','\t');
 end
+% Retreive files from the stored path
+StoredPath = [Fpath,'MFA_10h',filesep];
+Cn = readtable([StoredPath 'timbr_rno_acetaminophen_t1_d1_ctl.txt']);
+Tr = readtable([StoredPath 'timbr_rno_acetaminophen_t1_d1_trt.txt']);
 
-Cn = readtable('(selected location of the generated files above\MFA_10h\timbr_rno_acetaminophen_t1_d1_ctl.txt');
-Tr = readtable('(selected location of the generated files above\MFA_10h\timbr_rno_acetaminophen_t1_d1_trt.txt');
-
-% calculate the raw timbr score using the netwrok demand files generated
+% Calculate the raw timbr score using the netwrok demand files generated
 % above
 Raw_score = -(Tr{:,2}-Cn{:,2})./(Tr{:,2} + Cn{:,2});
 Prod_score = (Raw_score-mean(Raw_score))./std(Raw_score);
@@ -206,5 +211,4 @@ end
  
 rnames = rno_irrev.rxnNames(rn);
 % calculate changes for 10h data
-Table_10h = [rnames num2cell(Prod_score)];
- 
+Table_10h = [rnames num2cell(Prod_score)]; 
