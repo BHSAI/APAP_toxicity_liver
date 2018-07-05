@@ -1,15 +1,24 @@
+% Pannala et al. (2018)
+%% Figure 5: Volcano plots
+% Download the supplementary files of the manuscript to the folder where
+% github files were downloaded
+% Load the iRno model file provided in cobra format
+% Install COBRA toolbox
+% intialize the toolbox using the below command
+% initCobraToolbox()
+% Set path to the folder
+Spath = mfilename('fullpath');
+Loc = regexp(Spath,filesep);
+Fpath = Spath(1:Loc(end));
+addpath (Fpath)
 changeCobraSolver('glpk'); % or glpk
-% % Load COBRA models
-% remove "insertpath" and  put current folder location of the files
-% downloaded for manuscript
-addpath '"Insertpath"'
 load iRno_v2.mat;
 model=rno_cobra;
 % Find total number of unique metabolites in the model
 UkegID = unique(model.metKEGGID,'sorted');
 MkegID = UkegID(2:1701);
 %% matching metabolites from plasma (blood) sample to the model
-addpath '"Insertpath"'
+% addpath '"Insertpath"'
 % Kegg ids in the data
 [~,T,Kraw] = xlsread('TableS3','Pathway Heat Map','H9:H577');
 [v5h,~,Kraw5] = xlsread('TableS3','Pathway Heat Map','Q9:Q577');
@@ -19,7 +28,6 @@ addpath '"Insertpath"'
 [q5h,~,Krawq5] = xlsread('TableS3','Pathway Heat Map','AE9:AE577');
 [q10h,~,Krawq10] = xlsread('TableS3','Pathway Heat Map','AG9:AG577');
 [~,N,Nraw] = xlsread('TableS3','Pathway Heat Map','E9:E577');
-
 % volcano plot showing metabolite changes for 5 h and 10h
 figure (5); set(figure(5),'Units','inches','Position',[0.5 0.5 9.8 7.0]);
 subplot(2,2,1); subplot('position',[0.08 0.58 0.4 0.38]);
@@ -70,8 +78,8 @@ met_names_model = model.metNames(q);
 met_names_data=Mname(q1);
 % Load the metabolites that were mapped to the iRno model from TableS3 based on KEGG ID
 % annotation
-All_Data10h=readtable('"Insertpath"\Metabolites_mapped_10h_data.txt','Delimiter','\t');
-All_Data5h=readtable('"Insertpath"\Metabolites_mapped_5h_data.txt','Delimiter','\t');
+All_Data10h=readtable('Metabolites_mapped_10h_data.txt','Delimiter','\t');
+All_Data5h=readtable('Metabolites_mapped_5h_data.txt','Delimiter','\t');
 M10 = All_Data10h{:,1};
 M5 = All_Data5h{:,1};
 [p4,q4]=ismember(M5,M10);
@@ -131,5 +139,3 @@ set(gca,'LineWidth',1.5,'FontSize',12,'FontName','arial');
 xlabel('log_2(Fold change)','FontName','arial'); ylabel('-log_1_0(FDR)')
 text(-7.6,9.6,'d','FontName','Arial','FontSize',14)
 xlim([-6,6]); ylim([0 9]); xticks(-6:3:6);yticks(0:3:9)
-
-
