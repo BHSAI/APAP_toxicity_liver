@@ -2,17 +2,21 @@
 % Script to run timbr predictions for acetaminophen induced liver injury
 % Under no metabolic flux analysis constraints.
 % Load the path to reactions weights generated using the R scripts
-path_rcode_directory = '(location of the reaction weights)\Weights_apap/';
-path_model_directory = '(current model directory)/';
+Spath = mfilename('fullpath');
+Loc = regexp(Spath,filesep);
+Fpath = Spath(1:Loc(end));
+FilePath10 = [Fpath,'Weights_apap',filesep];
+path_rcode_directory = FilePath10;
+path_model_directory = Fpath;
 % Specify output directory for TIMBR predictions
-path_timbr_directory = [path_model_directory 'NoMFA_10h/'];
-
-changeCobraSolver('glpk'); % or glpk
-% % Load COBRA models
+path_timbr_directory = [path_model_directory 'NoMFA_10h',filesep]; pause
+addpath (Fpath)
+% Change the solver
+changeCobraSolver('glpk'); 
+% Load COBRA models
 load iRno_v2.mat;
-% obj_value_required 
+% no specific objective functions (biomass or ATP)
 obj_value_required = 0;
-% atp_value_required = 5000;
 atp_value_required = 0;
 % Set unconstrained reaction bounds to +/- 10^5 because the largest
 % consumption rate is fairly close to the default 10^3 reaction bound.
@@ -159,9 +163,9 @@ for rno_timbr_index = 1:rno_timbr_count
 end
 
 %% Caluclate the timbr production scores
-Cn = readtable('(selected location of the generated files above\NoMFA_10h\timbr_rno_acetaminophen_t1_d1_ctl.txt');
-Tr = readtable('(selected location of the generated files above\NoMFA_10h\timbr_rno_acetaminophen_t1_d1_trt.txt');
-
+StoredPath = [Fpath,'NoMFA_10h',filesep];
+Cn = readtable([StoredPath 'timbr_rno_acetaminophen_t1_d1_ctl.txt']);
+Tr = readtable([StoredPath 'timbr_rno_acetaminophen_t1_d1_trt.txt']);
 % calculate the raw timbr score using the netwrok demand files generated
 % above
 Raw_score = -(Tr{:,2}-Cn{:,2})./(Tr{:,2} + Cn{:,2});
