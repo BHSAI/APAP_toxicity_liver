@@ -1,10 +1,18 @@
-%% Figure 2a, b: plot differential gene expression against q values: volcano plots
-% load the differential gene expression data along with q values
-% Tables APAP5h.txt and APAP10h.txt were copied from the
+% Pannala et al., (2018)
+%% Figure 2a, b: Volcano plots: Differential gene expression against false discovery rates (FDR)
+% Load the differential gene expression data along with q values
+% from Tables APAP5h.txt and APAP10h.txt which were obtained from the
+% RNA-seq analysis by Kallisto/Sleuth and stored in Weights_apap folder
 % Sleuth_table_liver files
-% Remove "Insertpath" portion and include the path to the folder Weights_apap located on your machine
-Gene_5h=readtable('"Insertpath"\Weights_apap\APAP5h.txt','Delimiter','\t');
-Gene_10h=readtable('"Insertpath"\Weights_apap\APAP10h.txt','Delimiter','\t');
+% set path
+Spath = mfilename('fullpath');
+Loc = regexp(Spath,filesep);
+Fpath = Spath(1:Loc(end));
+FilePath5 = [Fpath,'Weights_apap',filesep,'APAP5h.txt'];
+FilePath10 = [Fpath,'Weights_apap',filesep,'APAP10h.txt'];
+% Load the data
+Gene_5h=readtable(FilePath5,'Delimiter','\t');
+Gene_10h=readtable(FilePath10,'Delimiter','\t');
 G5h_x = exp(Gene_5h{:,2});G5h_x = log2(G5h_x);
 G5h_y = Gene_5h{:,1}; 
 G10h_x = exp(Gene_10h{:,2});G10h_x = log2(G10h_x);
@@ -46,9 +54,10 @@ lg.FontSize = 11;lg.FontName = 'arial';
 %% Figure 2c,d: plot differential gene expression against q values: volcano plots for genes mapped to iRno model
 % load the differential gene expression data along with q values
 % Tables for metabolic genes were obtained after mapping genes to the iRno model from Sleuth_table_liver files
-% Remove "Insertpath" portion and include the path to the folder Weights_apap located on your machine
-mGene_5h=tdfread('"Insertpath"\Weights_apap\Metabolic_genes_liver5h.tsv','\t');
-mGene_10h=tdfread('"Insertpath"\Weights_apap\Metabolic_genes_liver10h.tsv','\t');
+FilePathm5 = [Fpath,'Weights_apap',filesep,'Metabolic_genes_liver5h.tsv'];
+FilePathm10 = [Fpath,'Weights_apap',filesep,'Metabolic_genes_liver10h.tsv'];
+mGene_5h=tdfread(FilePathm5,'\t');
+mGene_10h=tdfread(FilePathm10,'\t');
 mG5h_x = exp(mGene_5h.b);mG5h_x = log2(mG5h_x);
 G5h_y = mGene_5h.qval; 
 mG10h_x = exp(mGene_10h.b);mG10h_x = log2(mG10h_x);
@@ -88,5 +97,3 @@ yticklabels{2}='';yticklabels{4}='';yticklabels{6}='';
 set(gca, 'YTickLabel', yticklabels);
 % lg=text(3.1,56,'APAP (10h)');
 lg.FontSize = 11;lg.FontName = 'arial';
-
-
