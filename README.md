@@ -44,10 +44,10 @@ Helper functions: Timbr_5h_MFA.m and Timbr_5h_NoMFA.m are used to generate the T
   
   Helper functions: timbr.m and ncomm_blais_model2irrev.m
 
-## iRno_v2.mat
+### iRno_v2.mat
   Rat genome scale metabolic model version 2 in cobra format
 
-## iRno_v2_SBML.xml
+### iRno_v2_SBML.xml
   Rat genome scale metabolic model version 2 in SBML
 
 ## Helper function files:
