@@ -4,28 +4,28 @@ Code availability for the manuscript titled "Metabolic network-based predictions
 
 Following scripts were used to generate Figures in the main text and Supplementary Fig. S1. 
 
-## Figure 2
+## Figure 2: Plot_Fig_2.m
 Inputs: processed gene expression fold changes stored in the folder Weights_apap
 
 Outputs: volcano plot for gene expression changes
 
-## Figure 4
+## Figure 4: : Plot_Fig_4.m
 Inputs: processed metabolic flux analysis data
 
 Outputs: bar charts for absolute flux changes
 
-## Figure 5
+## Figure 5: : Plot_Fig_5.m
 Inputs: processed metabolite fold changes reported in Suppplementary TableS3
 
 Outputs: volcano plots for metabolite changes
 
-## Figure 7
+## Figure 7: : Plot_Fig_7.m
 Inputs: processed table of TIMBR predcitions for the metabolite changes given in the folders MFA_10h and NoMFA_10h and observed metabolite changes Mets_increased/decreased_10h_data
 
 Outputs: heatmap showing the observed metabolite changes in the data vs. model predictions at 10 h post APAP treatment
 Helper functions: Timbr_10h_MFA.m and Timbr_10h_NoMFA.m are used to generate the Tables in the MFA_10h folders
 
-## Figure S1
+## Figure S1: : Plot_Fig_S1.m
 Inputs: processed table of TIMBR predcitions for the metabolite changes given in the folders MFA_5h and NoMFA_5h and observed metabolite changes Mets_increased/decreased_10h_data
 
 Outputs: heatmap showing the observed metabolite changes in the data vs. model predictions at 5 h post APAP treatment 
