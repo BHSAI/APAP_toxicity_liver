@@ -1,5 +1,4 @@
 # APAP_toxicity_liver
-# Genome-scale model analysis of acetaminophen toxicity in the laboratory rat 
 Code availability for the manuscript titled "Metabolic network-based predictions of toxicant-induced metabolite changes in the laboratory rat" by Pannala *et al*.
 
 Following scripts were used to generate Figures in the main text and Supplementary Fig. S1. 
